@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realestate - Choose your dream home</title>
+    <!--======== custom css link =========-->
+    <link rel="stylesheet" href="index.css">
+    <!--========= google font link ========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+<header class="header" data-header>
+    <div class="container">
+        <a href="#" class="logo">
+            Realestate
+        </a>
+
+        <nav class="navbar container" data-navbar>
+            <ul class="navbar-list">
+                <li>
+                    <a href="#" class="navbar-link" data-nav-link>About Us</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar-link" data-nav-link>Property</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar-link" data-nav-link>Agent</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar-link" data-nav-link>Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn btn-secondary">Contact Us</a>
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+            <ion-icon name="close-outline" aria-hidden="trur" class="close-icon"></ion-icon>
+
+        </button>
+    </div>
+</header>
+
+<!--======== main =========-->
+<main>
+    <article class="article">
+        <section class="section hero" aria-label="hero">
+            <div class="container">
+                <div class="hero-bg">
+                    <div class="hero-content">
+                        <h1 class="h1 hero-title">
+                           Journey To Perfect Dream Home
+                        </h1>
+
+                        <p class="hero-text">
+                            Let our experts team guide you through the magic of real estate and helping you find the perfect home where your dreams take flight
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hero-form-wrapper">
+                    <div class="form-tab">
+                        <button class="tab-btn active" data-tab-btn>Buy</button>
+                        <button class="tab-btn " data-tab-btn>Sell</button>
+                        <button class="tab-btn " data-tab-btn>Rent</button>
+                    </div>
+
+                    <form action="" class="hero-form">
+                        <div class="input-wrapper">
+                            <label for="search" class="input-label">Search: *</label>
+                            <input type="search" name="search" id="search" placeholder="Search your home" required class="input-field">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="category" class="input-label">Select Categories</label>
+                            <select name="category" id="category" class="dropdown-list">
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="offices">Offices</option>
+                                <option value="townhome">Townhome</option>
+                            </select>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="min-price" class="input-label">Min Price :</label>
+                            <select name="min-price" id="min-price" class="dropdown-list">
+                                <option value="min price">Min Price</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                                <option value="2000">2000</option>
+                                <option value="3000">3000</option>
+                                <option value="4000">4000</option>
+                                <option value="5000">5000</option>
+                                <option value="6000">6000</option>
+                            </select>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="max-price" class="input-label">Max Price :</label>
+                            <select name="max-price" id="max-price" class="dropdown-list">
+                                <option value="max price">Max Price</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                                <option value="2000">2000</option>
+                                <option value="3000">3000</option>
+                                <option value="4000">4000</option>
+                                <option value="5000">5000</option>
+                                <option value="6000">6000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="about" aria-level="about">
+            <div class="container">
+                <div class="about-banner img-holder" style="--width: 600; --height: 700;">
+                    <img src="src/hero_img.jpg" width="600px" height="700px" loading="lazy" alt="" class="img-cover">
+
+                </div>
+
+                <div class="about-content">
+                    <h2 class="h2 section-title">Trusted. Affordable. Transparent</h2>
+                    <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt commodi ex illo quisquam impedit, corrupti odio placeat dolores eius voluptas? Mollitia quas laborum dolores ipsam dolor. Quo provident at modi!</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<script>
+    // Select all buttons with the data-tab-btn attribute
+    const tabButtons = document.querySelectorAll('[data-tab-btn]');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove the 'active' class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            // Add the 'active' class to the clicked button
+            button.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
