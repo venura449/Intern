@@ -224,7 +224,6 @@ body {
 
 .logo i{
     display: inline-block;
-    color: var(--sea-green);
     --ionicon-stroke-width: 50px;
 }
 
